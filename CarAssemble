@@ -1,0 +1,30 @@
+ import java.util.*;;
+
+public class CarAssemble {
+
+    public static void main(String[] args){
+        Scanner sc =new Scanner(System.in);
+        List<String> carInfo = new ArrayList<>();
+        carInfo.add("Toyota");
+        carInfo.add("Diesel");
+        carInfo.add("Automatic");
+
+        Car mycar = new Car.CarBuilder()
+                .brand("Toyota")
+                .transmission("7")
+                .enginetype("Automatic")
+                .capacity(4)
+                .color("pink")
+                .build();
+
+        System.out.println(mycar.getBrand());
+        System.out.println(mycar.getTransmission());
+        System.out.println(mycar.getEnginetype());
+        System.out.println(mycar.getCapacity()); 
+        System.out.println(mycar.getColor());       
+
+
+    }
+}
+
+       
