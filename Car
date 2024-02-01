@@ -1,0 +1,78 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Car {
+        protected final String brand;
+        protected final String transmission;
+        protected final String enginetype;
+        protected final Integer capacity;
+        protected final String color;
+    
+    private Car (CarBuilder carbuilder){
+        this.brand = carbuilder.brand;
+        this.transmission = carbuilder.transmission;
+        this.enginetype = carbuilder.enginetype;
+        this.capacity = carbuilder.capacity;
+        this.color = carbuilder.color;
+    }
+
+    protected static class CarBuilder{
+        private String brand;
+        private  String transmission;
+        private  String enginetype;
+        private Integer capacity;
+        private String color;
+
+        public CarBuilder brand (String brand){
+            this.brand = brand;
+            return this;
+        }
+
+        public CarBuilder transmission (String transmission){
+            this.transmission = transmission;
+            return this;
+        }
+
+        public CarBuilder enginetype (String enginetype){
+            this.enginetype = enginetype;
+             return this;
+        }
+
+        public CarBuilder capacity (Integer capacity){
+            this.capacity = capacity;
+             return this;
+        }
+
+        public CarBuilder color (String color){
+            this.color = color;
+             return this;
+        }
+
+        public Car build(){
+            return new Car(this);
+    }
+
+}
+    public String getBrand() {
+        return brand;
+    }
+   
+    public String getTransmission() {
+        return transmission;
+    }
+
+    public String getEnginetype() {
+        return enginetype;
+    }
+
+    public Integer getCapacity() {
+        return capacity;
+    }
+
+    public String getColor() {
+        return color;
+    }
+}
+
+
+    
